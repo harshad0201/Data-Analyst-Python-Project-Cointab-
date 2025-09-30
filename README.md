@@ -1,39 +1,37 @@
-👓**Cointab Data Analyst Assignment**
+# 👓 Cointab Data Analyst Assignment
 
-**Overview**
+## 📌 Overview  
+This project verifies courier charges for an Indian e-commerce company (**X**).  
+The goal is to compare **expected delivery charges** (calculated from X’s internal data) with the **charges billed by courier companies**, and highlight mismatches.  
 
-This project verifies courier charges for an Indian e-commerce company (X). The goal is to compare expected delivery charges (calculated from X’s internal data) with the charges billed by courier companies, and highlight mismatches.
+---
 
-**Input Data**
+## 📂 Input Data  
+- **Order Report** – Order IDs with SKUs  
+- **Pincode Mapping** – Warehouse → Delivery pincode zones  
+- **SKU Master** – Product weights  
+- **Courier Invoice (CSV)** – AWB, Order ID, courier weight, zone, billed charges, etc.  
+- **Rate Card** – Charges by zone & weight slab (forward / RTO)  
 
-Order Report – Order IDs with SKUs.
+---
 
-Pincode Mapping – Warehouse → Delivery pincode zones.
+## ⚙️ Processing Steps  
+1. Calculate order weight and applicable weight slab (based on zones).  
+2. Map warehouse & delivery pincodes to delivery zones.  
+3. Compute expected courier charges using the rate card logic.  
+4. Compare expected vs billed charges for each order.  
 
-SKU Master – Product weights.
+---
 
-Courier Invoice (CSV) – AWB, Order ID, courier weight, zone, billed charges, etc.
+## 📊 Output  
+- **Order-level Report (Excel/CSV)**  
+  Contains order details, weights, zones, expected vs billed charges, and differences.  
 
-Rate Card – Charges by zone & weight slab (forward / RTO).
+- **Summary Report**  
+  Shows counts and amounts of correctly charged, overcharged, and undercharged orders.  
 
-**Processing**
+---
 
-Calculate order weight and applicable weight slab (based on zones).
-
-Map warehouse & delivery pincodes to delivery zones.
-
-Compute expected courier charges using rate card logic.
-
-Compare with courier invoice charges.
-
-**Output**
-
-Order-level Report (Excel/CSV) – Contains order details, weights, zones, expected vs billed charges, and differences.
-
-Summary Report – Counts and amounts of correctly charged, overcharged, and undercharged orders.
-
-**Deliverables:**
-
-Excel file with two sheets (order-level report + summary).
-
-Source code (Python/R/Java/etc.).
+## 📦 Deliverables  
+- 📑 Excel file with two sheets (order-level report + summary).  
+- 💻 Source code (Python / R / Java / JavaScript).  
